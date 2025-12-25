@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Maritime career of Mark Hopking</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A research-led account of the maritime career of Mark Richard Hopking, a British mariner and superyacht captain, based on published sources and industry coverage." />
-
-  <link rel="canonical" href="https://marine.markhopking.co.uk/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A research-led account of the maritime career of Mark Richard Hopking, covering expedition sailing, polar operations, superyacht command and new-build project leadership, with documentary and published-source citations.">
+  <link rel="canonical" href="https://marine.markhopking.co.uk/">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -14,15 +13,51 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://marine.markhopking.co.uk/#website",
+        "url": "https://marine.markhopking.co.uk/",
+        "name": "Maritime career — Mark Hopking",
+        "inLanguage": "en-GB",
+        "publisher": { "@id": "https://markhopking.co.uk/#person" }
+      },
+      {
         "@type": "WebPage",
         "@id": "https://marine.markhopking.co.uk/#webpage",
         "url": "https://marine.markhopking.co.uk/",
         "name": "Maritime career of Mark Hopking",
-        "description": "A research-led account of the maritime career of Mark Richard Hopking, a British mariner and superyacht captain.",
         "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://markhopking.co.uk/#website" },
+        "isPartOf": { "@id": "https://marine.markhopking.co.uk/#website" },
         "about": { "@id": "https://markhopking.co.uk/#person" },
-        "mainEntity": { "@id": "https://markhopking.co.uk/#person" }
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "https://marine.markhopking.co.uk/#primaryimage",
+          "url": "https://marine.markhopking.co.uk/marine-og.jpg"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://marine.markhopking.co.uk/#article",
+        "headline": "Maritime career of Mark Hopking",
+        "inLanguage": "en-GB",
+        "mainEntityOfPage": { "@id": "https://marine.markhopking.co.uk/#webpage" },
+        "author": { "@id": "https://markhopking.co.uk/#person" },
+        "publisher": { "@id": "https://markhopking.co.uk/#person" },
+        "about": [
+          { "@id": "https://markhopking.co.uk/#person" },
+          { "@type": "Thing", "name": "Expedition sailing" },
+          { "@type": "Thing", "name": "Polar operations" },
+          { "@type": "Thing", "name": "Superyacht command" },
+          { "@type": "Thing", "name": "New-build project leadership" }
+        ],
+        "dateModified": "2025-12-25"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://marine.markhopking.co.uk/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://markhopking.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Maritime career", "item": "https://marine.markhopking.co.uk/" }
+        ]
       }
     ]
   }
@@ -37,89 +72,87 @@
       color: #111;
       background-color: #fafafa;
     }
-
-    header, main, footer, nav.site-nav {
-      max-width: 900px;
+    header, main, footer, nav {
+      max-width: 980px;
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
 
-    nav.site-nav {
-      padding-top: 0.75rem;
-      padding-bottom: 0;
+    /* Site nav */
+    .site-nav {
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
     }
-
-    nav.site-nav a {
-      font-size: 0.95rem;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      line-height: 1.3;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-    }
-
-    p {
-      margin: 0.75rem 0;
-    }
-
-    a {
+    .site-nav a {
       color: #1a4b8c;
       text-decoration: none;
+      margin-right: 0.85rem;
+      white-space: nowrap;
     }
+    .site-nav a:hover, .site-nav a:focus { text-decoration: underline; }
 
-    a:hover, a:focus {
-      text-decoration: underline;
-    }
+    header { padding-top: 0.5rem; }
+    h1, h2, h3 { font-weight: 650; line-height: 1.25; }
+    h1 { font-size: 2rem; margin: 0 0 0.5rem 0; }
+    h2 { font-size: 1.35rem; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; }
+    p { margin: 0.75rem 0; }
 
-    .lead {
-      font-size: 1.05rem;
-    }
+    a { color: #1a4b8c; text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
 
-    .meta {
-      color: #555;
-      font-size: 0.95rem;
-    }
+    .lead { font-size: 1.05rem; }
 
+    /* Citations */
+    sup a { text-decoration: none; }
+    sup a:hover, sup a:focus { text-decoration: underline; }
+
+    /* Boxes */
     .note {
-      font-size: 0.9rem;
-      color: #555;
-      margin: 0.75rem 0 1.25rem 0;
+      border-left: 4px solid #c7c7c7;
+      background: #fff;
+      padding: 0.9rem 1rem;
+      margin: 1rem 0;
     }
+    .note em { color: #333; }
 
-    /* citations */
-    sup a {
-      text-decoration: none;
-      color: #1a4b8c;
+    /* Table (documentaries) */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1rem 0;
+      background: #fff;
     }
-    sup a:hover, sup a:focus {
-      text-decoration: underline;
-      color: #000;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.6rem 0.7rem;
+      text-align: left;
+      vertical-align: top;
     }
-
-    /* references */
-    #references ol {
-      padding-left: 1.25rem;
-    }
-    #references li {
-      margin: 0.5rem 0;
-      overflow-wrap: anywhere;
-    }
+    th { background: #f2f2f2; }
 
     footer {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #555;
       border-top: 1px solid #ddd;
       margin-top: 2rem;
+      padding-top: 1.25rem;
+    }
+    ol.references {
+      padding-left: 1.25rem;
+      margin: 0.75rem 0 0 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+    }
+    ol.references li { margin: 0.5rem 0; }
+    .ref-label { font-weight: 600; }
+
+    @media (max-width: 640px) {
+      header, main, footer, nav { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+      th, td { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -127,175 +160,227 @@
 <body>
 
   <nav class="site-nav" aria-label="Site navigation">
-    <a href="https://markhopking.co.uk/">← Mark Hopking (Home)</a>
+    <a href="https://markhopking.co.uk/">Mark Hopking</a>
+    <a href="https://marine.markhopking.co.uk/" aria-current="page">Maritime career</a>
+    <a href="https://barony.markhopking.co.uk/">Barony of Balvill</a>
+    <a href="https://heraldry.markhopking.co.uk/">Heraldry</a>
+    <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
   </nav>
 
   <header>
     <h1>Maritime career</h1>
     <p class="lead">
-      A research-led account of the maritime career of <strong>Mark Richard Hopking</strong>, based on published sources and industry coverage.
-    </p>
-    <p class="meta">
-      Related pages:
-      <a href="https://heraldry.markhopking.co.uk/">Heraldry</a> ·
-      <a href="https://barony.markhopking.co.uk/">Barony of Balvill</a> ·
-      <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
+      A research-led account of the maritime career of <strong>Mark Richard Hopking</strong>, covering expedition sailing, polar operations,
+      senior command and new-build project leadership within the superyacht sector.
     </p>
   </header>
 
   <main>
+    <section id="methodology">
+      <h2>Methodology and scope</h2>
+      <div class="note">
+        <em>
+          This page distinguishes between information supported by published sources and material held in private records.
+          Where evidence is unpublished or privately held, it is treated conservatively and not presented as independently verifiable.
+        </em>
+      </div>
+    </section>
 
-    <section aria-labelledby="methodology">
-      <h2 id="methodology">Methodology and scope</h2>
-      <p class="note">
-        This page distinguishes between information supported by published sources and material held in private records.
-        Where evidence is unpublished or privately held, it is treated conservatively and not presented as independently verifiable.
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        Hopking’s career developed from expedition and adventure-based sailing in Scotland in the early 1990s into polar operations and senior command appointments
+        in the superyacht sector, followed by new-build delivery and project leadership roles. Published coverage includes documentary material and specialist
+        yachting press, as well as industry commentary attributed to Hopking in professional periodicals.<sup><a href="#ref-8">[8]</a></sup><sup><a href="#ref-9">[9]</a></sup>
       </p>
     </section>
 
-    <section aria-labelledby="overview">
-      <h2 id="overview">Overview</h2>
+    <section id="early">
+      <h2>Early expedition and adventure sailing</h2>
       <p>
-  Hopking’s professional career developed from expedition and adventure-based maritime operations in the early 1990s into
-  senior command and project leadership roles within the superyacht sector. His work has been documented through a combination
-  of contemporaneous press reporting, broadcast documentaries, specialist industry publications, and regulatory records
-  <sup>
-    <a href="#ref-2">[2]</a>
-    <a href="#ref-4">[4]</a>
-    <a href="#ref-9">[9]</a>
-    <a href="#ref-14">[14]</a>
-  </sup>.
-</p>
+        Hopking worked at the John Ridgway Adventure School (now Ridgway Adventure) in the Scottish Highlands in the early 1990s.<sup><a href="#ref-2">[2]</a></sup>
+        A Channel 4 documentary episode, <em>Exposure</em> (1993), is associated with the Ridgway Adventure School’s approach to experiential training and expedition preparation.<sup><a href="#ref-3">[3]</a></sup>
+      </p>
+      <p>
+        During the same period, Hopking participated in a sea-kayaking expedition around Cape Horn with John and Rebecca Ridgway. The expedition was documented
+        in later-accessible media sources including an ITV film upload and Rebecca Ridgway’s published memoir.<sup><a href="#ref-4">[4]</a></sup><sup><a href="#ref-5">[5]</a></sup>
+      </p>
+      <div class="note">
+        <em>
+          The Channel 4 documentary and the Cape Horn expedition are treated here as distinct: the former concerns training activity at the Ridgway Adventure School,
+          whereas the latter is described in published accounts as a Ridgway family expedition rather than a school programme.
+        </em>
+      </div>
     </section>
 
-    <section aria-labelledby="early-career">
-      <h2 id="early-career">Early expedition and adventure sailing</h2>
-
+    <section id="polar">
+      <h2>Antarctic operations</h2>
       <p>
-        In the early 1990s, Hopking undertook expedition and adventure-based maritime work connected with John and Rebecca Ridgway.
-        He participated in a sea-kayaking expedition around Cape Horn that was documented in contemporaneous press coverage and later
-        media sources, including a 1993 ITV film and published narrative accounts of the expedition.<sup><a href="#ref-2">[2]</a><a href="#ref-3">[3]</a><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup>
-      </p>
-
-      <p>
-        Separately, Hopking’s work at the Ridgway Adventure School in Sutherland, Scotland, formed the subject of a Channel 4
-        <em>Cutting Edge</em> documentary episode concerned with management training and programme delivery at the school.<sup><a href="#ref-1">[1]</a><a href="#ref-6">[6]</a></sup>
+        In 1999, Hopking became captain of the expedition yacht <em>2041</em>, acquired for environmental education and Antarctic Treaty awareness initiatives associated with polar explorer Robert Swan’s 2041 Foundation.<sup><a href="#ref-6">[6]</a></sup>
+        A published expedition narrative, <em>2041: Voyage South</em>, documents the vessel’s objectives and operations in the Antarctic region.<sup><a href="#ref-7">[7]</a></sup>
       </p>
     </section>
 
-    <section aria-labelledby="antarctic">
-      <h2 id="antarctic">Antarctic operations</h2>
+    <section id="command">
+      <h2>Superyacht command</h2>
       <p>
-        In 1999, Hopking served as captain of the yacht <em>2041</em>, acquired by environmentalist Robert Swan as part of an Antarctic
-        Treaty awareness programme. In this role, he skippered the vessel from the United Kingdom to the Antarctic Peninsula, supporting
-        expeditionary activity and public engagement around polar environmental protection.<sup><a href="#ref-7">[7]</a><a href="#ref-8">[8]</a></sup>
+        In the superyacht sector, Hopking held senior command positions including the 78-metre motor yacht <em>Hampshire II</em> (reported in private records).<sup><a href="#ref-10">[10]</a></sup>
+        During this period, Hopking received an “Outstanding Personal Achievement” award at the Global Business Excellence Awards, listed by the awards programme among previous winners.<sup><a href="#ref-11">[11]</a></sup>
+      </p>
+      <p>
+        Hopking is credited in <em>The Crew Report</em> (SuperyachtNews / The Superyacht Group) as a contributor to professional discussion of regulation and culture within the yachting sector,
+        including a “Captains’ comments” feature in Issue 76 (2015) and a further “Captains’ comments” entry in Issue 77 (2016).<sup><a href="#ref-8">[8]</a></sup><sup><a href="#ref-12">[12]</a></sup>
       </p>
     </section>
 
-    <section aria-labelledby="superyacht-command">
-      <h2 id="superyacht-command">Superyacht command</h2>
-
+    <section id="governance">
+      <h2>Senior command as strategic and governance leadership</h2>
       <p>
-        From the early 2000s, Hopking’s career focused increasingly on large private motor yachts. Between 2011 and 2016, he commanded
-        the 78-metre motor yacht <em>Hampshire II</em> and contributed to published industry discussion concerning regulatory pressures and
-        change within the sector.<sup><a href="#ref-9">[9]</a><a href="#ref-10">[10]</a></sup>
+        The published record of Hopking’s roles in command, build delivery, and professional commentary supports treating his senior yachting work as encompassing
+        governance-aligned responsibilities in a regulated, safety-critical environment. In organisational terms, such work typically includes oversight of compliance systems,
+        operational risk management, stakeholder coordination (owners, shipyards, flag states, class, and insurers), and assurance of audit readiness and documentary control,
+        alongside leadership of multi-disciplinary teams and contracted suppliers.<sup><a href="#ref-8">[8]</a></sup><sup><a href="#ref-9">[9]</a></sup>
       </p>
-
       <p>
-        During this period, he received recognition through the Global Business Excellence Awards.<sup><a href="#ref-11">[11]</a></sup>
-      </p>
-    </section>
-
-    <section aria-labelledby="project-leadership">
-      <h2 id="project-leadership">New build and project leadership</h2>
-      <p>
-       Hopking later acted as build captain and project manager for the 74-metre Feadship explorer yacht <em>Sherpa</em>, overseeing construction
-at Feadship’s Royal Van Lent shipyard. The build and launch attracted coverage in specialist yachting media, and Hopking featured in
-documentary material relating to the project.<sup><a href="#ref-12">[12]</a><a href="#ref-13">[13]</a><a href="#ref-15">[15]</a></sup>
+        While yachting command is not formally equivalent to land-based corporate directorship, the functional scope of responsibility—particularly in regulated, capital-intensive operations—can
+        resemble non-executive governance objectives such as independent oversight, risk scrutiny, and performance assurance.
       </p>
     </section>
 
-    <section aria-labelledby="credentials">
-      <h2 id="credentials">Professional credentials</h2>
+    <section id="build">
+      <h2>New build and project leadership</h2>
       <p>
-        Hopking holds a Master’s Certificate of Competency issued by the UK Maritime &amp; Coastguard Agency, which can be verified through the
-        MCA’s online certificate validation service.<sup><a href="#ref-14">[14]</a></sup>
+        Hopking later served as build captain and project manager for the Feadship yacht <em>Sherpa</em>, a 74-metre support / explorer vessel launched in 2018 and covered in specialist yachting press.<sup><a href="#ref-9">[9]</a></sup><sup><a href="#ref-13">[13]</a></sup>
+        A documentary-style film of the project is publicly available on YouTube.<sup><a href="#ref-14">[14]</a></sup>
       </p>
     </section>
 
-    <section id="references" aria-labelledby="references-heading">
-      <h2 id="references-heading">References</h2>
-      <ol>
+    <section id="credentials">
+      <h2>Professional credentials</h2>
+      <p>
+        Hopking holds UK-issued maritime certification. The UK Maritime &amp; Coastguard Agency provides an online service for certificate verification of Certificates of Competency
+        and Flag State Endorsements.<sup><a href="#ref-1">[1]</a></sup>
+      </p>
+    </section>
+
+    <section id="media">
+      <h2>Broadcast and documentary appearances</h2>
+      <p>
+        Published sources associate Hopking with documentary material spanning expedition activity and superyacht build coverage.
+      </p>
+      <table aria-label="Documentary and broadcast sources">
+        <thead>
+          <tr>
+            <th>Work</th>
+            <th>Type</th>
+            <th>Notes</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><em>Exposure</em> (Channel 4, <em>Cutting Edge</em>, 1993)</td>
+            <td>Documentary episode (listing)</td>
+            <td>Associated with experiential training at the Ridgway Adventure School.</td>
+            <td><sup><a href="#ref-3">[3]</a></sup></td>
+          </tr>
+          <tr>
+            <td>Rebecca Ridgway Cape Horn documentary (ITV, 1993; later upload)</td>
+            <td>Documentary (video upload)</td>
+            <td>Later-accessible ITV upload relating to a Cape Horn expedition narrative.</td>
+            <td><sup><a href="#ref-4">[4]</a></sup></td>
+          </tr>
+          <tr>
+            <td><em>The Making of a Dream</em> (Sherpa build film)</td>
+            <td>Documentary-style film (YouTube)</td>
+            <td>Publicly available documentary-style coverage of the build and launch narrative.</td>
+            <td><sup><a href="#ref-14">[14]</a></sup></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <ol class="references">
         <li id="ref-1">
-          “Ridgway Adventure – School Trips and Summer Camps in Scotland”. Ridgway Adventure. Retrieved 2025-11-22.
-          <a href="https://www.ridgwayadventure.com/" target="_blank" rel="noopener noreferrer">https://www.ridgwayadventure.com/</a>
+          <span class="ref-label">[1]</span>
+          Maritime &amp; Coastguard Agency (UK), “Online UK Certificate of Competency checker” (CoC/FSE verification service).
+          Available at <a href="https://coccec.mcga.gov.uk/" rel="nofollow">coccec.mcga.gov.uk</a> (accessed 2025-12-25).
         </li>
         <li id="ref-2">
-          Dunbabin, Bridget (1991-10-29). “Canoeists to tackle treacherous Cape”. <em>East Anglian Daily Times</em>. Suffolk, England. p. 15.
+          <span class="ref-label">[2]</span>
+          Ridgway Adventure, official website, “Our story / history” (John Ridgway Adventure School origins).
+          <a href="https://www.ridgway-adventure.co.uk/" rel="nofollow">ridgway-adventure.co.uk</a> (accessed 2025-12-25).
         </li>
         <li id="ref-3">
-          “BT staff in link with canoe expedition”. <em>East Anglian Daily Times</em>. Suffolk, England. 1992-01-22. p. 8.
+          <span class="ref-label">[3]</span>
+          <em>Cutting Edge</em> (Channel 4), episode listing: “Exposure” (1993). IMDb episode entry:
+          <a href="https://www.imdb.com/title/tt34787423/" rel="nofollow">imdb.com/title/tt34787423</a> (accessed 2025-12-25).
         </li>
         <li id="ref-4">
-          ITV (2022-08-10). “The Remarkable Story Of The First Woman To Round Cape Horn – ITV, 1993” (video). Retrieved 2025-11-22 – via YouTube.
+          <span class="ref-label">[4]</span>
+          ITV (upload), “The Remarkable Story Of The First Woman To Round Cape Horn – ITV, 1993” (video).
+          <a href="https://www.youtube.com/watch?v=FqFvJ-O3f9Y" rel="nofollow">youtube.com/watch?v=FqFvJ-O3f9Y</a> (accessed 2025-12-25).
         </li>
         <li id="ref-5">
-          Rebecca Ridgway, <em>Something Amazing</em> (Hodder &amp; Stoughton, 1993). ISBN 0340574801.
+          <span class="ref-label">[5]</span>
+          Ridgway, Rebecca. <em>Something Amazing: Cape Wrath to Cape Horn by Way of Peru</em>. Hodder &amp; Stoughton, 1993. ISBN 0340574801.
         </li>
         <li id="ref-6">
-          “Exposure”. BFI – British Film Institute. Archived from the original on 2014-02-04. Retrieved 2025-11-22.
+          <span class="ref-label">[6]</span>
+          Royal Geographical Society, “2041 Foundation | Expedition opportunity” (organisation overview).
+          <a href="https://www.rgs.org/exploration/support/expedition-opportunities/2041-foundation" rel="nofollow">rgs.org</a> (accessed 2025-12-25).
         </li>
         <li id="ref-7">
-          “General 4”. Robert Swan. Retrieved 2025-11-24.
-          <a href="https://www.robertswan.com/" target="_blank" rel="noopener noreferrer">https://www.robertswan.com/</a>
+          <span class="ref-label">[7]</span>
+          Swan, Robert; Mee, Roger. <em>2041: Voyage South</em>. 2041 Trust / JWP Ltd, 1999. ISBN 0952328275.
         </li>
         <li id="ref-8">
-          Robert Swan and Roger Mee, <em>2041: Voyage South</em> (2041 Trust / JWP Ltd, 1999). ISBN 0952328275.
+          <span class="ref-label">[8]</span>
+          “Captains’ comments: Are we over-regulated?”, <em>The Crew Report</em>, Issue 76 (Winter 2015), SuperyachtNews / The Superyacht Group (PDF).
+          <a href="https://media.superyachtnews.com/uploads/library/Crew/Documents/TCR%2076%20Captains%20comments.pdf" rel="nofollow">media.superyachtnews.com</a> (accessed 2025-12-25).
         </li>
         <li id="ref-9">
-  “Captains’ comments: Are we over-regulated?”, <em>The Crew Report</em>, Issue 76
-  (SuperyachtNews / The Superyacht Group, 2015). PDF available at
-  <a href="https://media.superyachtnews.com/uploads/library/Crew/Documents/TCR%2076%20Captains%20comments.pdf"
-     target="_blank" rel="noopener noreferrer">
-     https://media.superyachtnews.com/uploads/library/Crew/Documents/TCR%2076%20Captains%20comments.pdf
-  </a>.
-  Includes contribution credited to “Captain Mark Hopking, M/Y <em>Hampshire II</em>”.
-</li>
-
-<li id="ref-10">
-  <em>The Crew Report</em>, Issue 77 (SuperyachtNews / The Superyacht Group, 2016), p. 19.
-  “The good old days of yachting” – Captains’ Comments section. PDF available at
-  <a href="https://www.superyachtnews.com/library/thecrewreport/opensource/pdf/77"
-     target="_blank" rel="noopener noreferrer">
-     https://www.superyachtnews.com/library/thecrewreport/opensource/pdf/77
-  </a>.
-</li>
+          <span class="ref-label">[9]</span>
+          SuperyachtNews, “Feadship launches 74m explorer ‘Sherpa’” (30 April 2018).
+          <a href="https://www.superyachtnews.com/fleet/feadship-launches-74m-explorer-sherpa" rel="nofollow">superyachtnews.com</a> (accessed 2025-12-25).
+        </li>
+        <li id="ref-10">
+          <span class="ref-label">[10]</span>
+          Mark Hopking, professional CVs (private records held by the author; versions titled “Mark Hopking CV – Trinity House” and “Mark Hopking – Master New Layout”).
+        </li>
         <li id="ref-11">
-          “Global Business Excellence Awards | GBEAs | Awards for business excellence across all sectors, public and private”. gbeawards.com. Retrieved 2025-12-24.
+          <span class="ref-label">[11]</span>
+          Global Business Excellence Awards (GBEAs), “Previous winners” listing (includes “Capt. Mark Hopking — Outstanding Personal Achievement”).
+          <a href="https://gbeawards.com/previous_winners.asp" rel="nofollow">gbeawards.com</a> (accessed 2025-12-25).
         </li>
         <li id="ref-12">
-          “Sherpa: all you need to know about Feadship's new superyacht”. <em>Superyacht Times</em>. 2018-04-30. Retrieved 2025-11-23.
+          <span class="ref-label">[12]</span>
+          <em>The Crew Report</em> (SuperyachtNews / The Superyacht Group), Issue 77 (2016), “The good old days of yachting” (Captains’ Comments).
+          Issue landing page: <a href="https://www.superyachtnews.com/crew/the-good-old-days-of-yachting" rel="nofollow">superyachtnews.com</a> (accessed 2025-12-25).
         </li>
         <li id="ref-13">
-          “Feadship launches 74m explorer ‘Sherpa’”. <em>Superyacht News</em>. 2018-04-30. Retrieved 2025-11-23.
+          <span class="ref-label">[13]</span>
+          SuperYacht Times, “Sherpa: all you need to know about Feadship’s new superyacht” (30 April 2018).
+          <a href="https://www.superyachttimes.com/yacht-news/sherpa-all-you-need-to-know-about-feadship-s-first-support-yacht" rel="nofollow">superyachttimes.com</a> (accessed 2025-12-25).
         </li>
         <li id="ref-14">
-          “Maritime &amp; Coastguard Agency Certificate validation”. MCA Online UK Certificate of Competency checker. Retrieved 2025-11-24.
+          <span class="ref-label">[14]</span>
+          “The Making of a Dream” (video) — documentary-style coverage of the build narrative for <em>Sherpa</em>.
+          <a href="https://www.youtube.com/watch?v=VPmGvjXBomw" rel="nofollow">youtube.com/watch?v=VPmGvjXBomw</a> (accessed 2025-12-25).
         </li>
-        <li id="ref-15">
-  “The Making of a Dream – Feadship Sherpa” (documentary film). Available at
-  <a href="https://www.youtube.com/watch?v=VPmGvjXBomw"
-     target="_blank" rel="noopener noreferrer">
-     https://www.youtube.com/watch?v=VPmGvjXBomw
-  </a>.
-</li>      </ol>
+      </ol>
     </section>
-
   </main>
 
   <footer>
     <p>
-      © Mark Hopking. This page forms part of a structured site network presenting different aspects of a single canonical person entity.
+      Related pages:
+      <a href="https://markhopking.co.uk/">Mark Hopking</a> ·
+      <a href="https://heraldry.markhopking.co.uk/">Heraldry</a> ·
+      <a href="https://barony.markhopking.co.uk/">Barony of Balvill</a> ·
+      <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
     </p>
   </footer>
 
