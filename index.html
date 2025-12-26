@@ -150,12 +150,24 @@
       overflow-wrap: anywhere;
     }
 
-    footer {
-      font-size: 0.85rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
+  /* Standard site footer */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #1a4b8c;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
   </style>
 
   <!-- JSON-LD (kept focused; person identity anchored to the main site) -->
@@ -487,11 +499,20 @@
     </section>
   </main>
 
-  <footer>
-    <p>
-      This page forms part of a connected site set about Mark Hopking.
-      For biography and consolidated identity schema, see <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
-    </p>
-  </footer>
+<footer class="site-footer">
+  <p>
+    © <span id="copyright-year"></span>
+    <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
+    All rights reserved.
+  </p>
+  <p>
+    Content is presented in a neutral, third-party style with citations distinguishing
+    published sources from privately held records.
+  </p>
+</footer>
+
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
