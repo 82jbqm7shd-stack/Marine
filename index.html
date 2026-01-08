@@ -28,14 +28,14 @@
       background-color: var(--bg);
     }
 
-    header, main, footer {
+    header, main, footer, nav.site-nav {
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 1.5rem;
     }
 
     header {
-      padding-top: 2rem;
+      padding-top: 0.5rem;
     }
 
     h1, h2, h3 {
@@ -68,6 +68,11 @@
     }
 
     .nav a { margin-right: 0.75rem; }
+
+    nav.site-nav {
+      padding-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
 
     .methodology-note {
       margin-top: 1rem;
@@ -268,6 +273,13 @@
 </head>
 
 <body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="https://markhopking.co.uk/">← Mark Hopking (Home)</a> ·
+    <a href="https://barony.markhopking.co.uk/">Barony</a> ·
+    <a href="https://heraldry.markhopking.co.uk/">Heraldry</a> ·
+    <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
+  </nav>
+
   <header>
     <h1>Maritime career of Mark Hopking</h1>
     
