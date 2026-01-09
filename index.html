@@ -1,270 +1,733 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maritime career of Mark Hopking</title>
-  <meta name="description" content="An evidence-led account of the maritime career of Mark Richard Hopking, from expedition leadership through polar operations to senior superyacht command and governance roles." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maritime Career of Mark Hopking</title>
 
+  <meta name="description" content="An evidence-led account of the maritime career of Mark Richard Hopking, from expedition leadership through polar operations to senior superyacht command and governance roles." />
   <link rel="canonical" href="https://marine.markhopking.co.uk/" />
+  <link rel="icon" type="image/png" href="Hopking-Favicon.png">
+  <link rel="shortcut icon" type="image/png" href="Hopking-Favicon.png">
+  <link rel="apple-touch-icon" href="Hopking-Favicon.png">
+
+  <!-- Social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maritime Career of Mark Hopking" />
+  <meta property="og:description" content="Three decades of maritime leadership, from expedition sailing to senior superyacht command" />
+  <meta property="og:url" content="https://marine.markhopking.co.uk/" />
+  <meta property="og:image" content="https://marine.markhopking.co.uk/Bridge_Layout.jpg" />
+
+  <!-- Google Fonts: Elegant serif for headers, clean sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --text: #111;
-      --muted: #555;
-      --link: #1a4b8c;
-      --bg: #fafafa;
-      --card: #fff;
-      --border: #ddd;
-      --maxw: 900px;
+      /* Maritime & Traditional Color Palette */
+      --navy: #1a4b8c;
+      --navy-dark: #14396b;
+      --burgundy: #8b2635;
+      --gold: #d4a574;
+      --gold-light: #e6c9a0;
+      --charcoal: #4a4a4a;
+      --warm-gray: #6b6b6b;
+      --cream: #f5f2ed;
+      --white: #ffffff;
+      --border-light: #e5e3de;
+      
+      /* Typography */
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: system-ui, -apple-system, sans-serif;
+      
+      color-scheme: light;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font-body);
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: var(--text);
-      background-color: var(--bg);
+      color: var(--charcoal);
+      background: var(--cream);
     }
 
-    header, main, footer, nav.site-nav {
-      max-width: var(--maxw);
+    /* ==================== NAVIGATION ==================== */
+    
+    .site-nav {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
     }
 
-    header {
-      padding-top: 0.5rem;
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--white);
+      transition: opacity 0.2s;
     }
 
-    h1, h2, h3 {
-      font-weight: 650;
-      line-height: 1.3;
-      margin: 0.5rem 0;
+    .nav-brand:hover {
+      opacity: 0.9;
     }
 
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.4rem; margin-top: 2rem; }
-    h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    .nav-arms {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      filter: brightness(1.1);
+    }
 
-    p { margin: 0.75rem 0; }
+    .nav-brand-text h1 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+    }
 
-    a { color: var(--link); text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; }
+    .nav-brand-text .subtitle {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      opacity: 0.85;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
 
-    sup a { text-decoration: none; }
-    sup a:hover, sup a:focus { text-decoration: underline; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
 
-    .lead {
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--navy-dark);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+    }
+
+    /* ==================== HERO SECTION ==================== */
+    
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 48px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(139, 38, 53, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h2 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+
+    .hero-description {
       font-size: 1.05rem;
-      margin-top: 0.75rem;
+      line-height: 1.7;
+      opacity: 0.9;
+      max-width: 600px;
     }
 
-    .nav {
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .nav a { margin-right: 0.75rem; }
-
-    nav.site-nav {
-      padding-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-
-    .methodology-note {
-      margin-top: 1rem;
-      padding: 0.9rem 1rem;
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: 10px;
-      font-style: italic;
-      color: #333;
-    }
-
-    .toc {
-      margin-top: 1rem;
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: 10px;
-    }
-
-    .toc ul { margin: 0.25rem 0 0; padding-left: 1.1rem; }
-
-    .refs {
-      margin-top: 2rem;
-      border-top: 1px solid var(--border);
-      padding-top: 1.25rem;
-    }
-
-    .refs ol {
-      padding-left: 1.2rem;
-      margin: 0.75rem 0 0;
-    }
-
-    .refs li {
-      margin: 0.6rem 0;
-      overflow-wrap: anywhere;
-    }
-
-    .site-footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #ddd;
-      font-size: 0.85rem;
-      color: #555;
+    .hero-image {
       text-align: center;
     }
 
-    .site-footer a {
-      color: #1a4b8c;
-      text-decoration: none;
+    .hero-bridge {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 12px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
-    .site-footer a:hover {
+    .hero-bridge:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 968px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        margin: 0 auto;
+      }
+    }
+
+    /* ==================== MAIN CONTENT ==================== */
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .section-header p {
+      color: var(--warm-gray);
+      font-size: 1.1rem;
+    }
+
+    /* ==================== METHODOLOGY NOTE ==================== */
+    
+    .methodology-note {
+      background: var(--white);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 48px;
+      font-size: 1rem;
+      color: var(--charcoal);
+      font-style: italic;
+    }
+
+    /* ==================== CAREER PHASE CARDS ==================== */
+    
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .career-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .career-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: var(--gold);
+      transition: height 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      border-color: var(--gold);
+    }
+
+    .career-card:hover::before {
+      height: 100%;
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .career-card:hover .card-icon {
+      transform: scale(1.1);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .card-period {
+      font-size: 0.9rem;
+      color: var(--burgundy);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .card-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--warm-gray);
+    }
+
+    .card-highlights {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      color: var(--charcoal);
+    }
+
+    .card-highlights ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    .card-highlights li {
+      margin: 4px 0;
+      color: var(--warm-gray);
+    }
+
+    /* ==================== CONTENT SECTIONS ==================== */
+    
+    .content-section {
+      margin-bottom: 48px;
+    }
+
+    .content-section h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .content-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin: 32px 0 16px;
+      font-weight: 600;
+    }
+
+    .content-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    /* Citation links */
+    sup a {
+      text-decoration: none;
+      color: var(--navy);
+    }
+
+    sup a:hover {
       text-decoration: underline;
+    }
+
+    /* ==================== ACHIEVEMENT HIGHLIGHT BOX ==================== */
+    
+    .achievement-box {
+      background: #fffbf0;
+      border-left: 4px solid var(--gold);
+      padding: 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+    }
+
+    .achievement-box h4 {
+      font-family: var(--font-display);
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .achievement-box p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* ==================== INFO BOX ==================== */
+    
+    .info-section {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 48px;
+      margin-bottom: 64px;
+    }
+
+    .info-section h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 32px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 48px;
+    }
+
+    .info-details {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 16px 24px;
+      font-size: 0.95rem;
+    }
+
+    .info-details dt {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .info-details dd {
+      color: var(--charcoal);
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-list li {
+      padding: 4px 0;
+    }
+
+    .info-list li::before {
+      content: '•';
+      color: var(--gold);
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 968px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .info-details dt {
+        margin-top: 16px;
+      }
+
+      .info-details dt:first-child {
+        margin-top: 0;
+      }
+    }
+
+    /* ==================== REFERENCES ==================== */
+    
+    .references {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 48px;
+      margin-top: 64px;
+    }
+
+    .references h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .references ol {
+      padding-left: 32px;
+      counter-reset: reference-counter;
+    }
+
+    .references li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .references a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .references a:hover {
+      border-bottom-color: var(--navy);
+    }
+
+    /* ==================== FOOTER ==================== */
+    
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 48px 24px 24px;
+      margin-top: 64px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .footer-bottom p {
+      margin: 8px 0;
+    }
+
+    /* ==================== ANIMATIONS ==================== */
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .career-card,
+    .content-section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* ==================== PRINT STYLES ==================== */
+    
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .site-nav,
+      .nav-toggle,
+      footer {
+        display: none;
+      }
+
+      .hero {
+        background: none;
+        color: black;
+        border-bottom: 2px solid black;
+      }
+
+      .career-card,
+      .info-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .career-card {
+        border: 1px solid black;
+      }
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+
+      h1, h2, h3 {
+        color: black;
+      }
     }
   </style>
 
+  <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://marine.markhopking.co.uk/#website",
-        "url": "https://marine.markhopking.co.uk/",
-        "name": "Maritime career of Mark Hopking",
-        "inLanguage": "en-GB",
-        "publisher": {
-          "@type": "Person",
-          "@id": "https://markhopking.co.uk/#person"
-        }
-      },
-      {
         "@type": "WebPage",
         "@id": "https://marine.markhopking.co.uk/#webpage",
         "url": "https://marine.markhopking.co.uk/",
         "name": "Maritime career of Mark Hopking",
+        "description": "An evidence-led account of the maritime career of Mark Richard Hopking, from expedition leadership through polar operations to senior superyacht command",
         "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://marine.markhopking.co.uk/#website" },
-        "about": { "@id": "https://markhopking.co.uk/#person" },
-        "dateModified": "2026-01-08"
+        "isPartOf": { "@id": "https://markhopking.co.uk/#website" }
       },
       {
-        "@type": "Article",
-        "@id": "https://marine.markhopking.co.uk/#article",
-        "headline": "Maritime career of Mark Hopking",
-        "inLanguage": "en-GB",
-        "mainEntityOfPage": { "@id": "https://marine.markhopking.co.uk/#webpage" },
-        "about": { "@id": "https://markhopking.co.uk/#person" },
-        "author": {
-          "@type": "Organization",
-          "name": "markhopking.co.uk"
-        },
-        "mentions": [
-          {
-            "@type": "Book",
-            "name": "2041: Voyage South",
-            "author": [
-              { "@type": "Person", "name": "Robert Swan" },
-              { "@type": "Person", "name": "Roger Mee" }
-            ],
-            "isbn": "0952328275",
-            "datePublished": "1999"
-          },
-          {
-            "@type": "Book",
-            "name": "Something Amazing",
-            "author": { "@type": "Person", "name": "Rebecca Ridgway" },
-            "isbn": "0340574801",
-            "datePublished": "1993",
-            "publisher": { "@type": "Organization", "name": "Hodder & Stoughton" }
-          },
-          {
-            "@type": "VideoObject",
-            "name": "The Remarkable Story Of The First Woman To Round Cape Horn – ITV, 1993",
-            "url": "https://www.youtube.com/watch?v=FqFvJ-O3f9Y",
-            "uploadDate": "1993"
-          },
-          {
-            "@type": "VideoObject",
-            "name": "The Making of a Dream (Sherpa build documentary)",
-            "url": "https://www.youtube.com/watch?v=VPmGvjXBomw"
-          },
-          {
-            "@type": "TVEpisode",
-            "name": "Exposure",
-            "partOfSeries": {
-              "@type": "TVSeries",
-              "name": "Cutting Edge"
-            },
-            "datePublished": "1993-01-25"
-          },
-          {
-            "@type": "Organization",
-            "name": "Ridgway Adventure School",
-            "url": "https://www.ridgwayadventure.co.uk/"
-          },
-          {
-            "@type": "Organization",
-            "name": "Royal Institute of Navigation",
-            "alternateName": "AFRIN"
-          },
-          {
-            "@type": "Organization",
-            "name": "Nautical Institute",
-            "alternateName": "AFNI"
-          },
-          {
-            "@type": "Organization",
-            "name": "Society of Antiquaries of Scotland",
-            "alternateName": "FSAScot"
-          },
-          {
-            "@type": "Organization",
-            "name": "Honourable Company of Master Mariners"
-          },
-          {
-            "@type": "Product",
-            "name": "Laurel",
-            "category": "Motor Yacht",
-            "manufacturer": { "@type": "Organization", "name": "Delta" }
-          },
-          {
-            "@type": "Product",
-            "name": "Hampshire II",
-            "category": "Motor Yacht",
-            "manufacturer": { "@type": "Organization", "name": "Feadship" }
-          },
-          {
-            "@type": "Product",
-            "name": "Sherpa",
-            "category": "Motor Yacht",
-            "manufacturer": { "@type": "Organization", "name": "Feadship" }
-          }
-        ],
-        "keywords": "maritime, superyacht, yacht captain, expedition leadership, Antarctic operations, governance, maritime compliance, project management, Feadship, yacht command"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://marine.markhopking.co.uk/#breadcrumbs",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Mark Hopking",
-            "item": "https://markhopking.co.uk/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Maritime career",
-            "item": "https://marine.markhopking.co.uk/"
-          }
+        "@type": "Person",
+        "@id": "https://markhopking.co.uk/#person",
+        "name": "Mark Richard Hopking",
+        "jobTitle": "Master Mariner",
+        "memberOf": [
+          { "@type": "Organization", "name": "Royal Institute of Navigation" },
+          { "@type": "Organization", "name": "Nautical Institute" },
+          { "@type": "Organization", "name": "Society of Antiquaries of Scotland" },
+          { "@type": "Organization", "name": "Honourable Company of Master Mariners" }
         ]
       }
     ]
@@ -273,202 +736,413 @@
 </head>
 
 <body>
-  <nav class="site-nav" aria-label="Site navigation">
-    <a href="https://markhopking.co.uk/">← Mark Hopking (Home)</a> ·
-    <a href="https://barony.markhopking.co.uk/">Barony</a> ·
-    <a href="https://heraldry.markhopking.co.uk/">Heraldry</a> ·
-    <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="https://markhopking.co.uk/" class="nav-brand">
+        <img src="Mark_Hopking.png" alt="Arms of Mark Hopking" class="nav-arms" />
+        <div class="nav-brand-text">
+          <h1>Mark Hopking</h1>
+          <span class="subtitle">MARINER • BARON • ARMIGER</span>
+        </div>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        ☰
+      </button>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="https://marine.markhopking.co.uk/">Maritime</a>
+        <a href="https://barony.markhopking.co.uk/">Barony</a>
+        <a href="https://heraldry.markhopking.co.uk/">Heraldry</a>
+        <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
+      </div>
+    </div>
   </nav>
 
-  <header>
-    <h1>Maritime career of Mark Hopking</h1>
-    
-    <p class="lead">
-      Mark Hopking's maritime career spans three decades of progressive leadership, from expedition operations in extreme environments through to senior command of high-value vessels and governance roles within the international superyacht sector.
-    </p>
-
-    <div class="methodology-note">
-      This page presents a narrative account of Hopking's maritime career grounded in published sources, broadcast media, and industry documentation. Where documentary evidence is available, it is cited. The account also draws on uncited professional experience that forms part of Hopking's broader contribution to maritime operations and governance.
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h2>Maritime Career of Mark Hopking</h2>
+        <p class="hero-subtitle">Three Decades of Maritime Leadership</p>
+        <p class="hero-description">
+          From expedition operations in extreme environments through polar leadership to senior command of high-value 
+          vessels and governance roles within the international superyacht sector. A career demonstrating sustained 
+          progression, innovation in operational frameworks, and commitment to professional excellence.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="Bridge_Layout.jpg" alt="Yacht bridge command center" class="hero-bridge" />
+      </div>
     </div>
-
-    <nav class="toc" aria-label="Table of contents">
-      <strong>Contents</strong>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#foundation">Foundation in expedition leadership</a></li>
-        <li><a href="#operational">Operational command and governance development</a></li>
-        <li><a href="#strategic">Strategic leadership and capital project delivery</a></li>
-        <li><a href="#policy">Policy development and industry contribution</a></li>
-        <li><a href="#senior">Senior governance commands</a></li>
-        <li><a href="#recognition">Professional recognition</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section id="overview" aria-labelledby="overview-h">
-      <h2 id="overview-h">Overview</h2>
+    <!-- Methodology Note -->
+    <div class="methodology-note">
+      This page presents a narrative account of Hopking's maritime career grounded in published sources, broadcast media, 
+      and industry documentation. Where documentary evidence is available, it is cited. The account also draws on uncited 
+      professional experience that forms part of Hopking's broader contribution to maritime operations and governance.
+    </div>
+
+    <!-- Career Phases -->
+    <section>
+      <div class="section-header">
+        <h2>Career Evolution</h2>
+        <p>Six phases spanning expedition leadership to senior maritime command</p>
+      </div>
+
+      <div class="career-grid">
+        <div class="career-card">
+          <span class="card-icon">⛵</span>
+          <h3 class="card-title">Expedition Leadership</h3>
+          <p class="card-period">1990s</p>
+          <p class="card-description">
+            Foundation in challenging maritime environments with the John Ridgway Adventure School, including 
+            Cape Horn sea kayaking expedition and documentary media presence.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Cape Horn circumnavigation by sea kayak</li>
+              <li>Channel 4 documentary feature</li>
+              <li>Published expedition literature</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <span class="card-icon">🧊</span>
+          <h3 class="card-title">Polar Operations</h3>
+          <p class="card-period">2000–2001</p>
+          <p class="card-description">
+            Captain of expedition yacht <em>2041</em> supporting Antarctic Treaty awareness and environmental 
+            conservation objectives. Complex jurisdictional navigation and stakeholder management.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Antarctic expedition command</li>
+              <li>Environmental conservation service</li>
+              <li>International media coverage</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <span class="card-icon">⚓</span>
+          <h3 class="card-title">Operational Command</h3>
+          <p class="card-period">2006–2011</p>
+          <p class="card-description">
+            Master of M/Y <em>Laurel</em> (73m Delta). Development of comprehensive governance frameworks and 
+            industry-leading document control system. Global Business Excellence Award recipient.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Award-winning policy management system</li>
+              <li>Crew retention: 1.5–3 years (vs. industry 8–12 months)</li>
+              <li>Multi-million Euro budget oversight</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <span class="card-icon">🏗️</span>
+          <h3 class="card-title">Capital Project Delivery</h3>
+          <p class="card-period">2011–2018</p>
+          <p class="card-description">
+            Build captain for M/Y <em>Hampshire II</em> (78m Feadship) and master/project manager for M/Y <em>Sherpa</em> 
+            (72m Feadship). €100M+ project oversight from design through operational transition.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Three major newbuild programmes delivered</li>
+              <li>Remote working pioneer in superyacht sector</li>
+              <li>Comprehensive crew welfare frameworks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <span class="card-icon">📋</span>
+          <h3 class="card-title">Policy & Industry Contribution</h3>
+          <p class="card-period">Throughout</p>
+          <p class="card-description">
+            Published commentary in <em>The Crew Report</em> on regulatory frameworks and operational governance. 
+            Pioneering innovations adopted across multiple vessels and shore-based businesses.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Industry regulatory discourse participation</li>
+              <li>Governance frameworks in continued use</li>
+              <li>Cultural change leadership</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <span class="card-icon">👨‍✈️</span>
+          <h3 class="card-title">Senior Governance Commands</h3>
+          <p class="card-period">2018–Present</p>
+          <p class="card-description">
+            Multiple senior appointments requiring crisis leadership, complex regulatory navigation, and sustained 
+            operational delivery under exceptional circumstances including pandemic operations.
+          </p>
+          <div class="card-highlights">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>Multi-jurisdictional compliance management</li>
+              <li>COVID-19 crisis leadership</li>
+              <li>Sanctions framework navigation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Content Sections -->
+    <section class="content-section" id="foundation">
+      <h2>Foundation in Expedition Leadership</h2>
       
       <p>
-        Hopking's career demonstrates a sustained pattern of progression from expedition leadership in challenging environments to senior maritime command and strategic project delivery. His work is documented across broadcast media, maritime and yachting press, published expedition literature, and industry commentary on regulatory practice and operational governance.
+        Hopking's professional maritime career began in the early 1990s at the John Ridgway Adventure School in Scotland, 
+        where he worked aboard the yacht English Rose VI. This period established formative leadership experience in 
+        challenging maritime environments and introduced principles of team management, risk assessment, and operational 
+        decision-making that would characterise his subsequent career. The Adventure School's operations were documented 
+        in a Channel 4 <em>Cutting Edge</em> documentary ("Exposure", broadcast 25 January 1993) in which Hopking 
+        featured.<sup><a href="#ref-2">[2]</a></sup>
       </p>
 
       <p>
-        The career arc encompasses expedition sailing in the 1990s, polar operations around the turn of the millennium, and eighteen years of senior command within the large-yacht sector. Throughout this period, Hopking developed and refined governance frameworks, led major capital projects, and contributed to industry discourse on regulatory compliance and operational standards. His professional contributions include pioneering innovations in document control systems, cultural change initiatives, and policy development subsequently adopted across the maritime sector.
+        During this period, Hopking participated in a sea kayaking expedition around Cape Horn alongside John and Rebecca 
+        Ridgway. The expedition received contemporary press coverage in UK regional newspapers,<sup><a href="#ref-3">[3]</a></sup> 
+        and Hopking features in both an ITV broadcast film<sup><a href="#ref-4">[4]</a></sup> and Rebecca Ridgway's 
+        published account, <em>Something Amazing</em>.<sup><a href="#ref-5">[5]</a></sup> The expedition demonstrated 
+        early capacity for leadership in extreme conditions, team cohesion under pressure, and commitment to challenging 
+        objectives beyond commercial gain.
+      </p>
+
+      <h3>Antarctic Operations and Environmental Service</h3>
+
+      <p>
+        Hopking subsequently served as captain of the expedition yacht <em>2041</em>, a 20-metre vessel acquired for 
+        operations supporting Antarctic Treaty awareness and environmental conservation objectives. Argentine press 
+        reporting from October 2000 describes the mission and identifies Hopking as the yacht's captain.<sup><a href="#ref-6">[6]</a></sup> 
+        The programme and its voyage narrative are documented in the book <em>2041: Voyage South</em>.<sup><a href="#ref-7">[7]</a></sup>
+      </p>
+
+      <p>
+        This Antarctic service established an early pattern of operating in politically and environmentally sensitive 
+        contexts, managing stakeholder relationships across international boundaries, and contributing to public service 
+        objectives through maritime capability.
       </p>
     </section>
 
-    <section id="foundation" aria-labelledby="foundation-h">
-      <h2 id="foundation-h">Foundation in expedition leadership</h2>
+    <section class="content-section" id="operational">
+      <h2>Operational Command and Governance Development</h2>
       
       <p>
-        Hopking's professional maritime career began in the early 1990s at the John Ridgway Adventure School in Scotland, where he worked aboard the yacht English Rose VI. This period established formative leadership experience in challenging maritime environments and introduced principles of team management, risk assessment, and operational decision-making that would characterise his subsequent career. The Adventure School's operations were documented in a Channel 4 <em>Cutting Edge</em> documentary ("Exposure", broadcast 25 January 1993) in which Hopking featured.<sup><a href="#ref-2">[2]</a></sup>
+        By the mid-2000s, Hopking transitioned to senior command roles within the international large-yacht sector. His 
+        first major appointment was as master of the motor yacht <em>Laurel</em> (73m Delta), a position he held from 
+        2006 to 2011. Published charter reviews from this period identify him in command.<sup><a href="#ref-8">[8]</a></sup>
       </p>
 
       <p>
-        During this period, Hopking participated in a sea kayaking expedition around Cape Horn alongside John and Rebecca Ridgway. The expedition received contemporary press coverage in UK regional newspapers,<sup><a href="#ref-3">[3]</a></sup> and Hopking features in both an ITV broadcast film<sup><a href="#ref-4">[4]</a></sup> and Rebecca Ridgway's published account, <em>Something Amazing</em>.<sup><a href="#ref-5">[5]</a></sup> The expedition demonstrated early capacity for leadership in extreme conditions, team cohesion under pressure, and commitment to challenging objectives beyond commercial gain.
+        During the <em>Laurel</em> command, Hopking developed comprehensive governance frameworks covering safety 
+        management, regulatory compliance, and operational assurance. He established structured audit processes, 
+        transparent reporting mechanisms, and robust documentation systems that would later form the foundation for 
+        industry-recognised innovations.
       </p>
 
-      <h3>Antarctic operations and environmental service</h3>
+      <div class="achievement-box">
+        <h4>🏆 Global Business Excellence Award</h4>
+        <p>
+          Recognition for Outstanding Personal Achievement in developing an industry-leading policy and procedure 
+          management system with comprehensive document control capabilities. The framework continues in operational 
+          use and has inspired multiple shore-based businesses using principles derived from Hopking's original 
+          system design.<sup><a href="#ref-10">[10]</a></sup>
+        </p>
+      </div>
+
+      <h3>Cultural Leadership and Crew Retention</h3>
 
       <p>
-        Hopking subsequently served as captain of the expedition yacht <em>2041</em>, a 20-metre vessel acquired for operations supporting Antarctic Treaty awareness and environmental conservation objectives. Argentine press reporting from October 2000 describes the mission and identifies Hopking as the yacht's captain.<sup><a href="#ref-6">[6]</a></sup> The programme and its voyage narrative are documented in the book <em>2041: Voyage South</em>.<sup><a href="#ref-7">[7]</a></sup>
-      </p>
-
-      <p>
-        This Antarctic service established an early pattern of operating in politically and environmentally sensitive contexts, managing stakeholder relationships across international boundaries, and contributing to public service objectives through maritime capability. The work required navigation of complex jurisdictional frameworks, collaboration with governmental and non-governmental organisations, and sustained operational delivery in one of the world's most demanding maritime environments.
+        Parallel to governance innovation, Hopking established notable achievements in crew welfare and retention. 
+        Industry-standard crew retention in the superyacht sector typically ranges from eight to twelve months. Under 
+        Hopking's leadership, crew retention consistently exceeded one-and-a-half to three years, reflecting structured 
+        professional development, clear expectations, and values-driven team culture.
       </p>
     </section>
 
-    <section id="operational" aria-labelledby="operational-h">
-      <h2 id="operational-h">Operational command and governance development</h2>
+    <section class="content-section" id="strategic">
+      <h2>Strategic Leadership and Capital Project Delivery</h2>
       
       <p>
-        By the mid-2000s, Hopking transitioned to senior command roles within the international large-yacht sector. His first major appointment was as master of the motor yacht <em>Laurel</em> (73m Delta), a position he held from 2006 to 2011. Published charter reviews from this period identify him in command.<sup><a href="#ref-8">[8]</a></sup>
+        From 2011 onwards, Hopking assumed strategic leadership roles in major capital project delivery, directing three 
+        new-build programmes each valued at over €100 million. These appointments required oversight of design development, 
+        contract negotiation, stakeholder management, and the transition from construction to operational service.
+      </p>
+
+      <h3>Hampshire II: Build Captain and Operational Transition</h3>
+
+      <p>
+        Hopking served as build captain for the motor yacht <em>Hampshire II</em> (78m Feadship) from 2011 to 2016. 
+        The role encompassed on-site management during final construction phases, recruitment and development of the 
+        operational team, and establishment of governance frameworks necessary for long-term operational success.
+      </p>
+
+      <div class="achievement-box">
+        <h4>🌟 Remote Working Pioneer</h4>
+        <p>
+          Successful implementation of remote working practices within the superyacht crew structure at a time when the 
+          industry had not conceived of such flexibility. Embedded remote work options for certain roles, challenging 
+          traditional assumptions about crew presence and demonstrating that operational effectiveness could be maintained 
+          while offering enhanced work-life balance.
+        </p>
+      </div>
+
+      <h3>Sherpa: Comprehensive Project Leadership</h3>
+
+      <p>
+        Hopking's most extensive capital project leadership came as master and project manager for the motor yacht 
+        <em>Sherpa</em> (72m Feadship) from 2014 to 2018. He joined the project during its design phase, providing 
+        operational insight that influenced construction specifications and long-term serviceability. Trade press reporting 
+        on <em>Sherpa</em>'s launch appeared in SuperyachtNews,<sup><a href="#ref-11">[11]</a></sup> and a documentary 
+        presented a behind-the-scenes account of the build process.<sup><a href="#ref-12">[12]</a></sup>
       </p>
 
       <p>
-        During the <em>Laurel</em> command, Hopking developed comprehensive governance frameworks covering safety management, regulatory compliance, and operational assurance. He established structured audit processes, transparent reporting mechanisms, and robust documentation systems that would later form the foundation for industry-recognised innovations. The command also involved management of multi-million Euro operational budgets, oversight of international crew recruitment and retention, and stakeholder liaison across multiple jurisdictions.
-      </p>
-
-      <h3>Innovation in governance and document control</h3>
-
-      <p>
-        A defining achievement of this period was the development of an industry-leading policy and procedure management system with comprehensive document control capabilities. Where traditional maritime documentation systems often relied on fragmented, vessel-specific approaches with inconsistent version control and limited lifecycle management, Hopking designed and implemented an integrated framework that addressed these systemic weaknesses.
-      </p>
-
-      <p>
-        The system provided robust audit trails, systematic policy review cycles, and institutional memory independent of crew turnover. This innovation was subsequently recognised through a Global Business Excellence Award for "Outstanding Personal Achievement."<sup><a href="#ref-10">[10]</a></sup> The significance of this contribution extends beyond a single award: the framework continues in operational use on vessels where it was implemented, and has directly inspired former crew members to establish shore-based businesses providing virtual purser services using principles derived from Hopking's original system design.
-      </p>
-
-      <h3>Cultural leadership and crew retention</h3>
-
-      <p>
-        Parallel to governance innovation, Hopking established notable achievements in crew welfare and retention. Industry-standard crew retention in the superyacht sector typically ranges from eight to twelve months. Under Hopking's leadership, crew retention consistently exceeded one-and-a-half to three years, reflecting structured professional development, clear expectations, and values-driven team culture. This achievement demonstrated capacity to build cohesive, high-performing teams in an industry characterised by transience and competitive recruitment pressures.
+        Throughout the new-build programmes, Hopking introduced pioneering wellness and benefits structures that challenged 
+        sector norms, establishing comprehensive crew welfare frameworks that were unprecedented in the industry.
       </p>
     </section>
 
-    <section id="strategic" aria-labelledby="strategic-h">
-      <h2 id="strategic-h">Strategic leadership and capital project delivery</h2>
+    <section class="content-section" id="policy">
+      <h2>Policy Development and Industry Contribution</h2>
       
       <p>
-        From 2011 onwards, Hopking assumed strategic leadership roles in major capital project delivery, directing three new-build programmes each valued at over €100 million. These appointments required oversight of design development, contract negotiation, stakeholder management, and the transition from construction to operational service.
-      </p>
-
-      <h3>Hampshire II: Build captain and operational transition</h3>
-
-      <p>
-        Hopking served as build captain for the motor yacht <em>Hampshire II</em> (78m Feadship) from 2011 to 2016. The role encompassed on-site management during final construction phases, recruitment and development of the operational team, and establishment of the governance frameworks necessary for long-term operational success. During this period, Hopking's name appears in industry commentary on regulatory practice published in <em>The Crew Report</em> (SuperyachtNews),<sup><a href="#ref-9">[9]</a></sup><sup><a href="#ref-14">[14]</a></sup> reflecting his engagement with professional discourse on compliance frameworks and operational standards.
-      </p>
-
-      <p>
-        A notable innovation during the <em>Hampshire II</em> programme was the successful implementation of remote working practices within the superyacht crew structure. At a time when the industry had not conceived of such flexibility, Hopking embedded remote work options for certain roles, challenging traditional assumptions about crew presence and demonstrating that operational effectiveness could be maintained while offering enhanced work-life balance. This cultural leadership anticipated broader workforce trends and established precedent for flexible working arrangements in an historically conservative sector.
-      </p>
-
-      <h3>Sherpa: Comprehensive project leadership</h3>
-
-      <p>
-        Hopking's most extensive capital project leadership came as master and project manager for the motor yacht <em>Sherpa</em> (72m Feadship) from 2014 to 2018. He joined the project during its design phase, providing operational insight that influenced construction specifications and long-term serviceability. The role required strategic coordination across design teams, shipyard management, regulatory authorities, and family office stakeholders, with ultimate accountability for project delivery and operational readiness.
+        Alongside operational command and project delivery, Hopking contributed to industry discourse on regulatory 
+        frameworks, compliance practices, and operational governance. Published sources document Hopking's participation 
+        in industry debate concerning regulatory load and operational practice. A 2015 issue of <em>The Crew Report</em> 
+        includes commentary credited to "Captain Mark Hopking of M/Y Hampshire II" in discussion of regulatory pressures 
+        and code compliance.<sup><a href="#ref-9">[9]</a></sup>
       </p>
 
       <p>
-        Trade press reporting on <em>Sherpa</em>'s launch appeared in SuperyachtNews and specialist outlets,<sup><a href="#ref-11">[11]</a></sup> and a documentary presented a behind-the-scenes account of the build process.<sup><a href="#ref-12">[12]</a></sup> Beyond project execution, Hopking's role required establishment of budgetary frameworks (including CFO approval processes), transparent financial reporting, and management of evolving stakeholder requirements throughout the multi-year construction cycle. The successful delivery of <em>Sherpa</em> demonstrated sustained strategic oversight, adaptability to changing requirements, and capacity to maintain stakeholder confidence across complex, long-duration capital programmes.
-      </p>
-
-      <h3>Cultural innovation and benefits programmes</h3>
-
-      <p>
-        Throughout the new-build programmes, Hopking introduced pioneering wellness and benefits structures that challenged sector norms. He established comprehensive crew welfare frameworks that were unprecedented in the industry, embedding principles of duty of care, professional development support, and holistic wellbeing into operational practice. These innovations reflected commitment to cultural change and recognition that sustainable high performance required investment in human capital alongside technical and operational capabilities.
+        The policies and governance structures developed under Hopking's leadership have demonstrated lasting influence. 
+        Operational frameworks he authored continue in use on vessels where they were implemented. Former crew members 
+        have subsequently established professional practices drawing on principles and methodologies derived from Hopking's 
+        original systems. This sustained adoption across multiple contexts indicates the robustness and practical utility 
+        of the frameworks developed.
       </p>
     </section>
 
-    <section id="policy" aria-labelledby="policy-h">
-      <h2 id="policy-h">Policy development and industry contribution</h2>
+    <section class="content-section" id="senior">
+      <h2>Senior Governance Commands</h2>
       
       <p>
-        Alongside operational command and project delivery, Hopking contributed to industry discourse on regulatory frameworks, compliance practices, and operational governance. His participation in professional discussion provided practical insight drawn from operational experience, contributing to broader understanding of regulatory pressures and effective compliance strategies.
+        From 2018 onwards, Hopking held senior command appointments across multiple vessels, demonstrating sustained 
+        capability and adaptability across different ownership structures, operational contexts, and regulatory environments.
+      </p>
+
+      <h3>Crisis Leadership and Regulatory Navigation</h3>
+
+      <p>
+        One command presented exceptional challenges requiring crisis leadership across concurrent operational, regulatory, 
+        and public health domains. During this appointment, Hopking managed a large motor yacht operating under complex 
+        international regulatory scrutiny while navigating pandemic-related operational constraints. The situation required 
+        continuous liaison with government agencies and maritime authorities across multiple jurisdictions, management of 
+        evolving sanctions compliance frameworks, and maintenance of operational continuity despite profound external uncertainty.
       </p>
 
       <p>
-        Published sources document Hopking's participation in industry debate concerning regulatory load and operational practice. A 2015 issue of <em>The Crew Report</em> includes commentary credited to "Captain Mark Hopking of M/Y Hampshire II" in discussion of regulatory pressures and code compliance.<sup><a href="#ref-9">[9]</a></sup> His contributions reflected balanced perspective on the necessity of regulatory frameworks while acknowledging operational challenges in implementation.
-      </p>
-
-      <p>
-        The policies and governance structures developed under Hopking's leadership have demonstrated lasting influence. Operational frameworks he authored continue in use on vessels where they were implemented. Former crew members have subsequently established professional practices drawing on principles and methodologies derived from Hopking's original systems. This sustained adoption across multiple contexts indicates the robustness and practical utility of the frameworks developed, representing institutional contribution beyond individual command achievements.
+        This crisis leadership demonstrated capacity to operate effectively under extreme pressure, maintain ethical standards 
+        in ambiguous circumstances, exercise sound judgment across competing priorities, and preserve stakeholder confidence 
+        through transparent communication and consistent operational delivery.
       </p>
     </section>
 
-    <section id="senior" aria-labelledby="senior-h">
-      <h2 id="senior-h">Senior governance commands</h2>
+    <section class="content-section" id="recognition">
+      <h2>Professional Recognition and Continuing Contribution</h2>
       
       <p>
-        From 2018 onwards, Hopking held senior command appointments across multiple vessels, demonstrating sustained capability and adaptability across different ownership structures, operational contexts, and regulatory environments. These appointments required consistent application of governance principles, stakeholder management, and operational delivery under varying conditions of complexity and constraint.
-      </p>
-
-      <h3>Crisis leadership and regulatory navigation</h3>
-
-      <p>
-        One command presented exceptional challenges requiring crisis leadership across concurrent operational, regulatory, and public health domains. During this appointment, Hopking managed a large motor yacht operating under complex international regulatory scrutiny while navigating pandemic-related operational constraints. The situation required continuous liaison with government agencies and maritime authorities across multiple jurisdictions, management of evolving sanctions compliance frameworks, and maintenance of operational continuity despite profound external uncertainty.
-      </p>
-
-      <p>
-        The role demanded sustained engagement with senior government officials who expected uninterrupted service despite exceptional circumstances. Concurrently, Hopking maintained duty of care responsibilities for crew and guests affected by COVID-19, balanced competing regulatory requirements across different flag state and port state jurisdictions, and protected stakeholder reputation through discrete, professional management of politically sensitive circumstances.
+        Hopking holds professional recognition from several maritime and scholarly institutions, reflecting both technical 
+        competence and broader contribution to maritime practice and heritage. He is an Associate Fellow of the Royal 
+        Institute of Navigation (AFRIN), an Affiliate Fellow of the Nautical Institute (AFNI), and a Fellow of the Society 
+        of Antiquaries of Scotland (FSAScot). In March 2026, he will be clothed into the Livery of the Honourable Company 
+        of Master Mariners, having been admitted as a Freeman of that ancient guild.
       </p>
 
       <p>
-        This crisis leadership demonstrated capacity to operate effectively under extreme pressure, maintain ethical standards in ambiguous circumstances, exercise sound judgment across competing priorities, and preserve stakeholder confidence through transparent communication and consistent operational delivery. The experience exemplifies the intersection of operational capability, political sensitivity, and governance principle that characterises senior maritime command in complex international environments.
-      </p>
-
-      <h3>Continued operational excellence</h3>
-
-      <p>
-        Subsequent appointments maintained the pattern of governance development, stakeholder engagement, and operational delivery established throughout Hopking's career. His most recent command involved transitioning a newly-delivered vessel from construction to operational status, implementing safety and compliance frameworks, and establishing operational policies for long-term administration. This work demonstrated continued capability to establish robust governance structures and lead teams through significant organisational change.
+        These professional affiliations represent recognition by peer bodies of sustained contribution to maritime practice, 
+        commitment to professional standards, and engagement with broader maritime community. The diversity of affiliations—spanning 
+        navigation, professional seamanship, and maritime heritage—reflects the breadth of Hopking's interests and contributions 
+        beyond immediate operational responsibilities.
       </p>
     </section>
 
-    <section id="recognition" aria-labelledby="recognition-h">
-      <h2 id="recognition-h">Professional recognition and continuing contribution</h2>
-      
-      <p>
-        Hopking holds professional recognition from several maritime and scholarly institutions, reflecting both technical competence and broader contribution to maritime practice and heritage. He is an Associate Fellow of the Royal Institute of Navigation (AFRIN), an Affiliate Fellow of the Nautical Institute (AFNI), and a Fellow of the Society of Antiquaries of Scotland (FSAScot). In March 2026, he will be clothed into the Livery of the Honourable Company of Master Mariners, having been admitted as a Freeman of that ancient guild.
-      </p>
-
-      <p>
-        These professional affiliations represent recognition by peer bodies of sustained contribution to maritime practice, commitment to professional standards, and engagement with broader maritime community. The diversity of affiliations—spanning navigation, professional seamanship, and maritime heritage—reflects the breadth of Hopking's interests and contributions beyond immediate operational responsibilities.
-      </p>
-
-      <p>
-        Hopking's career trajectory from expedition leadership through senior operational command to governance and policy development demonstrates progressive accumulation of experience, consistent application of ethical principles, and sustained commitment to professional excellence across changing maritime contexts and evolving regulatory frameworks.
-      </p>
+    <!-- Professional Summary Info Box -->
+    <section class="info-section">
+      <h2>Professional Summary</h2>
+      <div class="info-grid">
+        <div>
+          <dl class="info-details">
+            <dt>Career span</dt>
+            <dd>1990s–Present (30+ years)</dd>
+            
+            <dt>Command experience</dt>
+            <dd>Expedition vessels, superyachts 70m+</dd>
+            
+            <dt>Major vessels</dt>
+            <dd>
+              <ul class="info-list">
+                <li>M/Y Laurel (73m Delta)</li>
+                <li>M/Y Hampshire II (78m Feadship)</li>
+                <li>M/Y Sherpa (72m Feadship)</li>
+                <li>S/Y 2041 (Antarctic expedition)</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        
+        <div>
+          <dl class="info-details">
+            <dt>Key achievements</dt>
+            <dd>
+              <ul class="info-list">
+                <li>Global Business Excellence Award</li>
+                <li>Three €100M+ capital projects delivered</li>
+                <li>Industry-leading governance frameworks</li>
+                <li>Published regulatory commentary</li>
+              </ul>
+            </dd>
+            
+            <dt>Affiliations</dt>
+            <dd>
+              <ul class="info-list">
+                <li>AFRIN (Royal Institute of Navigation)</li>
+                <li>AFNI (Nautical Institute)</li>
+                <li>FSAScot (Society of Antiquaries)</li>
+                <li>Freeman, Honourable Company of Master Mariners</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
     </section>
 
-    <section id="references" class="refs" aria-labelledby="refs-h">
-      <h2 id="refs-h">References</h2>
+    <!-- References -->
+    <section class="references">
+      <h2>References</h2>
       <ol>
         <li id="ref-1">
           Ridgway Adventure (Ridgway Adventure School). Public website (context for the Ridgway operation). Accessed 8 January 2026.
-          <a href="https://www.ridgwayadventure.co.uk/">https://www.ridgwayadventure.co.uk/</a>
+          <a href="https://www.ridgwayadventure.co.uk/" target="_blank" rel="noopener noreferrer">https://www.ridgwayadventure.co.uk/</a>
         </li>
 
         <li id="ref-2">
@@ -487,7 +1161,7 @@
 
         <li id="ref-4">
           ITV (1993), "The Remarkable Story Of The First Woman To Round Cape Horn – ITV, 1993" (video upload on YouTube).
-          <a href="https://www.youtube.com/watch?v=FqFvJ-O3f9Y">https://www.youtube.com/watch?v=FqFvJ-O3f9Y</a>.
+          <a href="https://www.youtube.com/watch?v=FqFvJ-O3f9Y" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=FqFvJ-O3f9Y</a>.
           Accessed 8 January 2026.
         </li>
 
@@ -497,7 +1171,7 @@
 
         <li id="ref-6">
           La Nación (Argentina), "Llegó un velero con la misión de recoger basura antártica", 1 Oct 2000 (updated 22 Jun 2020).
-          <a href="https://www.lanacion.com.ar/sociedad/llego-un-velero-con-la-mision-de-recoger-basura-antartica-nid35193/">https://www.lanacion.com.ar/sociedad/llego-un-velero-con-la-mision-de-recoger-basura-antartica-nid35193/</a>.
+          <a href="https://www.lanacion.com.ar/sociedad/llego-un-velero-con-la-mision-de-recoger-basura-antartica-nid35193/" target="_blank" rel="noopener noreferrer">https://www.lanacion.com.ar/sociedad/llego-un-velero-con-la-mision-de-recoger-basura-antartica-nid35193/</a>.
           Accessed 8 January 2026.
         </li>
 
@@ -507,44 +1181,44 @@
 
         <li id="ref-8">
           BOAT International, "Superyacht <em>Laurel</em> available for charter with Burgess", 11 May 2011.
-          <a href="https://www.boatinternational.com/charter/reviews/superyacht-laurel-available-for-charter-with-burgess--7119">https://www.boatinternational.com/charter/reviews/superyacht-laurel-available-for-charter-with-burgess--7119</a>.
+          <a href="https://www.boatinternational.com/charter/reviews/superyacht-laurel-available-for-charter-with-burgess--7119" target="_blank" rel="noopener noreferrer">https://www.boatinternational.com/charter/reviews/superyacht-laurel-available-for-charter-with-burgess--7119</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-9">
           <em>The Crew Report</em>, Issue 76 (SuperyachtNews / The Superyacht Group, 2015). "Captains' comments: Are we over-regulated?"
-          <a href="https://media.superyachtnews.com/uploads/library/Crew/Documents/TCR%2076%20Captains%20comments.pdf">PDF</a>.
+          <a href="https://media.superyachtnews.com/uploads/library/Crew/Documents/TCR%2076%20Captains%20comments.pdf" target="_blank" rel="noopener noreferrer">PDF</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-10">
           Global Business Excellence Awards, "Previous winners" (listing includes "Capt. Mark Hopking — Outstanding Personal Achievement").
-          <a href="https://gbeawards.com/previous_winners.asp">https://gbeawards.com/previous_winners.asp</a>.
+          <a href="https://gbeawards.com/previous_winners.asp" target="_blank" rel="noopener noreferrer">https://gbeawards.com/previous_winners.asp</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-11">
           SuperyachtNews, "Feadship launches 74m explorer 'Sherpa'", 30 Apr 2018.
-          <a href="https://www.superyachtnews.com/fleet/feadship-launches-74m-explorer-sherpa">https://www.superyachtnews.com/fleet/feadship-launches-74m-explorer-sherpa</a>.
+          <a href="https://www.superyachtnews.com/fleet/feadship-launches-74m-explorer-sherpa" target="_blank" rel="noopener noreferrer">https://www.superyachtnews.com/fleet/feadship-launches-74m-explorer-sherpa</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-12">
           YouTube, "The Making of a Dream" (Sherpa build documentary).
-          <a href="https://www.youtube.com/watch?v=VPmGvjXBomw">https://www.youtube.com/watch?v=VPmGvjXBomw</a>.
+          <a href="https://www.youtube.com/watch?v=VPmGvjXBomw" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=VPmGvjXBomw</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-13">
           Talati, Smita, "Set fair for an easy berth on the beach" (Cash Clinic), <em>The Daily Telegraph</em>, 28 Nov 1998, p. B14.
           OCR copy hosted on Newspapers.com (paywalled for some users):
-          <a href="https://www.newspapers.com/newspage/752301771/">https://www.newspapers.com/newspage/752301771/</a>.
+          <a href="https://www.newspapers.com/newspage/752301771/" target="_blank" rel="noopener noreferrer">https://www.newspapers.com/newspage/752301771/</a>.
           Accessed 8 January 2026.
         </li>
 
         <li id="ref-14">
           <em>The Crew Report</em>, Issue 77 (SuperyachtNews / The Superyacht Group, 2016), p. 19. "The good old days of yachting" – Captains' Comments section.
-          <a href="https://www.superyachtnews.com/library/thecrewreport/opensource/pdf/77#page=19">PDF</a>.
+          <a href="https://www.superyachtnews.com/library/thecrewreport/opensource/pdf/77#page=19" target="_blank" rel="noopener noreferrer">PDF</a>.
           Accessed 8 January 2026.
         </li>
 
@@ -555,27 +1229,82 @@
 
         <li id="ref-16">
           The Namibia 600, expedition website and race information.
-          <a href="https://namibia600.com">https://namibia600.com</a>.
+          <a href="https://namibia600.com" target="_blank" rel="noopener noreferrer">https://namibia600.com</a>.
           Accessed 8 January 2026.
         </li>
       </ol>
     </section>
+
   </main>
 
-  <footer class="site-footer">
-    <p>
-      © <span id="copyright-year"></span>
-      <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
-      All rights reserved.
-    </p>
-    <p>
-      Content is presented in a neutral, third-party style with citations distinguishing
-      published sources from privately held records.
-    </p>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Sections</h3>
+          <ul class="footer-links">
+            <li><a href="https://marine.markhopking.co.uk/">Maritime Career</a></li>
+            <li><a href="https://barony.markhopking.co.uk/">Barony of Balvill</a></li>
+            <li><a href="https://heraldry.markhopking.co.uk/">Heraldry</a></li>
+            <li><a href="https://genealogy.markhopking.co.uk/">Genealogy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/markhopking/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/markhopking" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com/markhopking/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://x.com/markhopking" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/" target="_blank" rel="noopener noreferrer">Debrett's Baronies</a></li>
+            <li><a href="https://roll.baronage.com/baron/mark-hopking" target="_blank" rel="noopener noreferrer">Baronage Roll</a></li>
+            <li><a href="https://www.rin.org.uk/" target="_blank" rel="noopener noreferrer">Royal Institute of Navigation</a></li>
+            <li><a href="https://www.nautinst.org/" target="_blank" rel="noopener noreferrer">Nautical Institute</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="copyright-year"></span> Mark Hopking. All rights reserved.</p>
+        <p>Content presented in a neutral, third-party style with citations distinguishing published sources from privately held records.</p>
+      </div>
+    </div>
   </footer>
 
   <script>
-    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    // Mobile menu toggle
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    // Update copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('.site-nav');
+      const navLinks = document.getElementById('navLinks');
+      
+      if (!nav.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+
+    // Close mobile menu when link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
   </script>
 </body>
 </html>
